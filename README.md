@@ -6,7 +6,7 @@ It is a 'peanut' :blush: library (or let's say petite file but awesome:sparkles:
 
 To know more about what CRUD is, click <a href='https://www.google.com/search?q=CRUD' target='_blank'>here</a>
 
-It is just a single file. You add it to your project and boom :boom:!!! You're done! **No need to 'master' SQL before you CRUD :)**
+It is just a single file. You add it to your project and boom :boom:!!! You're done! **No need to 'master' SQL before you CRUD** :smile:
 
 *Eg*
 ```php
