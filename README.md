@@ -1,6 +1,6 @@
 # PHPCRUDLib
 
-PHPCRUDLib is simple code to help you do CRUD in minutes. <3
+PHPCRUDLib is simple code to help you do CRUD in minutes. :heart:
 
 It is a 'peanut' :blush: library (or let's say petite file but awesome:sparkles:, because peanut taste good :yum:)
 
