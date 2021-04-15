@@ -34,7 +34,7 @@ $dbname  // database name eg. sales_db
 ***
 ## *USAGE*
 Download or clone this repo.
-After you have downloaded or cloned the repo, place the folder in any directory of your project.
+After you have downloaded or cloned the repo, place the folder in any directory inside your project.
 
 Then put this code in the file you want to perform your CRUD operations
 ```php
@@ -55,7 +55,7 @@ And it is not compulsory to use this variable **$PHPCRUDLib**, you can use any v
 
 ***
 ## *SAMPLE*
-Once the above is done, you can then go ahead and perfom your CRUD swiftly
+Once the above is done, you can then go ahead and perform your CRUD swiftly
 
 **Save new record into table Eg.1**
 ```php
@@ -78,7 +78,7 @@ $products->save();
 **update record**
 ```php
 //update records using id
-$PHPCRUDLib->name ='Malta Guiness';
+$PHPCRUDLib->name ='Malta Guinness';
 $id = 5;
 $PHPCRUDLib->update($id);
 ```
