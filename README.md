@@ -58,7 +58,7 @@ And it is not compulsory to use this variable **$PHPCRUDLib**, you can use any v
 Once the above is done, you can then go ahead and perfom your CRUD swiftly
 
 **Save new record into table Eg.1**
-```
+```php
 $PHPCRUDLib = new PHPCRUDLib($table_name);
 $PHPCRUDLib->name ='Pepsi Cola';
 $PHPCRUDLib->user_id =1;
@@ -67,7 +67,7 @@ $PHPCRUDLib->save();
 ```
 
 **Save new record into table Eg.2**
-```
+```php
 $products = new PHPCRUDLib($table_name);
 $products->name ='A1 Bread';
 $products->user_id =2;
@@ -76,7 +76,7 @@ $products->save();
 ```
 
 **update record**
-```
+```php
 //update records using id
 $PHPCRUDLib->name ='Malta Guiness';
 $id = 5;
@@ -85,7 +85,7 @@ $PHPCRUDLib->update($id);
 This code strictly depends on column name **id** so your primary key or unique must be **id**
 
 **delete single record**
-```
+```php
 //delete one record using id
 $id = 3;
 $PHPCRUDLib->delete($id);
@@ -93,7 +93,7 @@ $PHPCRUDLib->delete($id);
 This code strictly depends on column name **id** so your primary key or unique must be **id**
 
 **select all records**
-```
+```php
 //select all records in table
 $result = $PHPCRUDLib->allRecords();
 ```
