@@ -16,10 +16,10 @@ class PHPCRUDLib {
 	}
   // get tables fields
   protected function getFieldsOnTable() {
-		$rows =$this->loadResultWithNoBind("DESC ".$this->table);
+		$rows =$this->loadResultWithNoBind("SELECT column_name AS field, data_type AS type FROM information_schema.columns WHERE table_name ='".$this->table."'");
     $fields = array();
     foreach ($rows as $key => $value) {
-      $fields[] = $value['Field'];
+      $fields[] = $value['field'];
 }
 		return $fields;
 	}

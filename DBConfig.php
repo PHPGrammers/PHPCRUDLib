@@ -7,11 +7,11 @@ class DBConfig
 {
   private $conn;
 
-  private $dbms ='mysql'; //DBMS eg. mysql
+  private $dbms = 'mysql'; //'pgsql'; //DBMS eg. 'mysql' for MySQL/ MariaDB, 'pgsql' for PostgreSQL
   private $host = 'localhost'; //database host
-  private $port = '3306'; // database port
-  private $user ='root'; // database user
-  private $pass =''; //password of database user
+  private $port = '3306'; // '5432'; // database port
+  private $user = 'root'; //'postgres'; // database user
+  private $pass = ''; //'12345678'; //password of database user
   private $dbname ='dbtest_crudphp'; // database name
 public function databaseConnection()
 {
