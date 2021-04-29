@@ -16,6 +16,8 @@ $PHPCRUDLib->user_id =1;
 $PHPCRUDLib->created_at =date('Y-m-d H:i:s');
 $PHPCRUDLib->save();
 ```
+### Support
+<img src="https://pngimg.com/uploads/mysql/mysql_PNG23.png" alt="MySQL" width="70px" > &nbsp; &nbsp;  <img src="https://cdn.holistics.io/landing/databases/mariadb.png" alt="MariaDB" width="130px">  &nbsp; &nbsp;  <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--gaI7Ff9D--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/6lu26u1oaysf8cdfiiux.png" alt="PostgreSQL" width="100px">
 
 ***
 ## *CONFIGURATION*
