@@ -44,7 +44,7 @@ class PHPCRUDLib {
 	  foreach($this->attributes() as $key => $value){
 	    $clean_attributes[$key] = $this->escape_value($value);
 	  }
-	  return $clean_attributes;
+	  return TREUE;
 	}
 	/*--Create,Update and Delete methods--*/
 	public function save() {
