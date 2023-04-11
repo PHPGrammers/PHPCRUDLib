@@ -1,28 +1,39 @@
+
 <?php
+
 namespace PHPGrammers;
-/**
- *
- */
+
 class DBConfig
 {
-  private $conn;
+    private $conn;
+    private string $dbms;
+    private string $host;
+    private string $port;
+    private string $user;
+    private string $pass;
+    private string $dbname;
 
-  private $dbms = 'mysql'; //'pgsql'; //DBMS eg. 'mysql' for MySQL/ MariaDB, 'pgsql' for PostgreSQL
-  private $host = 'localhost'; //database host
-  private $port = '3306'; // '5432'; // database port
-  private $user = 'root'; //'postgres'; // database user
-  private $pass = ''; //'12345678'; //password of database user
-  private $dbname ='dbtest_crudphp'; // database name
-public function databaseConnection()
-{
-  define("HOST", $this->host);
-  define("PORT",  $this->port);
-  define("USER",  $this->user);
-  define("PASS",  $this->pass);
-  define("DATABASE_NAME",  $this->dbname);
-  define("DBMS",  $this->dbms);
-  $this->conn = new \PDO(DBMS.':host='.HOST.';port='.PORT.';dbname='.DATABASE_NAME, USER, PASS);
-  $this->conn->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_WARNING);
-  return $this->conn;
-}
+    public function __construct(string $dbms, string $host, string $port, string $user, string $pass, string $dbname)
+    {
+        $this->dbms = $dbms;
+        $this->host = $host;
+        $this->port = $port;
+        $this->user = $user;
+        $this->pass = $pass;
+        $this->dbname = $dbname;
+    }
+
+    public function databaseConnection()
+    {
+        $dsn = "$this->dbms:host=$this->host;port=$this->port;dbname=$this->dbname;charset=utf8mb4";
+
+        try {
+            $this->conn = new \PDO($dsn, $this->user, $this->pass);
+            $this->conn->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
+
+            return $this->conn;
+        } catch (\PDOException $e) {
+            throw new \Exception("Database connection failed: " . $e->getMessage());
+        }
+    }
 }
